@@ -1,0 +1,48 @@
+<svg fill="none" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .terminal {
+          background-color: #0d1117;
+          border: 1px solid #30363d;
+          border-radius: 6px;
+          padding: 15px;
+          font-family: monospace;
+          height: 350px;
+        }
+        .buttons span {
+          display: inline-block;
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          margin-right: 4px;
+        }
+        .title { color: #58a6ff; font-weight: bold; }
+        .key { color: #ff79c6; font-weight: bold; }
+        .value { color: #f8f8f2; }
+      </style>
+
+      <div class="terminal">
+        <div class="buttons" style="margin-bottom: 15px;">
+          <span style="background: #ff5f56;"></span>
+          <span style="background: #ffbd2e;"></span>
+          <span style="background: #27c93f;"></span>
+          <span style="color: #8b949e; margin-left: 10px; font-size: 11px;">lusker1@github: ~</span>
+        </div>
+        
+        <div style="font-size: 13px; line-height: 1.6;">
+          <span class="title">lusker1@github</span><br/>
+          <span>-------------------</span><br/>
+          <span class="key">Role:</span> <span class="value">Full Stack Developer</span><br/>
+          <span class="key">Location:</span> <span class="value">Riyadh, KSA</span><br/>
+          <span class="key">Stack:</span> <span class="value">Laravel, Vue.js, java</span><br/>
+          <span class="key">IDE:</span> <span class="value">Cursor / VS Code</span><br/>
+          <br/>
+          <span style="color: #50fa7b;">/* My Highlights */</span><br/>
+          <span class="value">- Building awesome hardware with ESP32-CAM</span><br/>
+          <span class="value">- Writing custom automation scripts</span>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
