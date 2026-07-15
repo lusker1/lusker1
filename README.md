@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>⚡ sidi_moulay.sh</h1>
+  <h1>⚡ BinSaleh.sh</h1>
   <p>Fullstack Developer • AI Builder • Tech Enthusiast</p>
 
   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border: none;">
