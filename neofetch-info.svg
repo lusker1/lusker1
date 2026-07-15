@@ -18,7 +18,7 @@
           margin-right: 4px;
         }
         .title { color: #58a6ff; font-weight: bold; }
-        .key { color: #ff79c6; font-weight: bold; }
+        .key { color: #f1fa8c; font-weight: bold; } /* تم تغيير اللون هنا إلى الأصفر */
         .value { color: #f8f8f2; }
       </style>
 
