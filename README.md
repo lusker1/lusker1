@@ -1,7 +1,6 @@
 <div align="center">
 
- <-- <h1>⚡BinSaleh </h1> --!>
- <-- <p>Fullstack Developer • AI Builder • Tech Enthusiast</p> --!>
+
   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border: none;">
     <tr>
       <td valign="top" style="border: none; padding: 10px;">
