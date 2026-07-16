@@ -6,7 +6,7 @@
         <img src="./ascii-art.svg" width="380" />
       </td>
       <td valign="top" style="border: none; padding: 10px;">
-        <img src="./neofetch-info.svg?v=5" width="380" />
+        <img src="./neofetch-info.svg?v=20" width="380" />
       </td>
     </tr>
   </table>
