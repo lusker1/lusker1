@@ -1,0 +1,87 @@
+<svg fill="none" viewBox="0 0 800 600" width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+      
+        .terminal-window {
+          background-color: #1a1b26; 
+          border: 1px solid #414868;
+          border-radius: 8px;
+          padding: 20px;
+          font-family: 'Courier New', Courier, monospace; /* خط monospace ضروري */
+          color: #a9b1d6; 
+          height: 550px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+      
+        .terminal-header {
+          display: flex;
+          margin-bottom: 15px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #414868;
+        }
+        .buttons span {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+
+        .typing-container {
+          white-space: pre; 
+          font-size: 14px;
+          line-height: 1.5;
+          overflow: hidden;
+          animation: typing 10s steps(100, end) forwards;
+        }
+
+        
+        @keyframes typing {
+          from { width: 0; }
+          to { width: 100%; }
+        }
+
+        .typing-container::after {
+          content: '|';
+          animation: blink 1s infinite;
+        }
+        @keyframes blink {
+          50% { opacity: 0; }
+        }
+      </style>
+
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="buttons">
+            <span style="background: #ff5f56;"></span>
+            <span style="background: #ffbd2e;"></span>
+            <span style="background: #27c93f;"></span>
+          </div>
+          <div style="color: #565f89; margin-left: 15px; font-size: 12px;">lusker1@github: ~/neofetch-info.svg</div>
+        </div>
+        
+        
+        <div class="typing-container">
+&lt;svg fill="none" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;foreignObject width="100%" height="100%"&gt;
+    &lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;
+      &lt;style&gt;
+        .terminal { background-color: #0d1117; ... }
+        .key { color: #f1fa8c; font-weight: bold; } 
+      &lt;/style&gt;
+      &lt;div class="terminal"&gt;
+        ...
+        &lt;span class="key"&gt;Role:&lt;/span&gt; &lt;span class="value"&gt;Full Stack Developer&lt;/span&gt;&lt;br/&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/foreignObject&gt;
+&lt;/svg&gt;
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
