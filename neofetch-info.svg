@@ -74,8 +74,8 @@
     
     <text x="15" y="232" class="loading-line value">Loading modules... [██████████░] 90%</text>
     
-    <text x="15" y="240" class="post-load l10"><tspan class="key">Total Repositories:</tspan> <tspan class="value">12</tspan></text>
-    <text x="15" y="258" class="post-load l11"><tspan class="key">Total Commits:</tspan> <tspan class="value">482</tspan></text>
+    <text x="15" y="240" class="post-load l10"><tspan class="key">Total Repositories:</tspan> <tspan class="value">REPO_COUNT</tspan></text>
+    <text x="15" y="258" class="post-load l11"><tspan class="key">Total Commits (2026):</tspan> <tspan class="value">COMMIT_COUNT</tspan></text>
     
     <text x="15" y="284" class="post-load l12"><tspan class="key">Memory: </tspan> <tspan class="value">512MB / 16GB (3%)</tspan></text>
     <text x="15" y="302" class="post-load l13"><tspan class="key">Network:</tspan> <tspan class="value">Connected [100.0 Mbps]</tspan></text>
