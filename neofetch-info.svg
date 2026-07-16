@@ -17,8 +17,8 @@
       to { clip-path: inset(0 0 0 0); }
     }
     
-    @keyframes fadeOut {
-      to { opacity: 0; visibility: hidden; }
+    @keyframes hideLine {
+      to { opacity: 0; min-height: 0; height: 0; display: none; visibility: hidden; }
     }
 
     .l1 { animation-delay: 0.1s; }
@@ -33,7 +33,7 @@
     
     .loading-line {
       clip-path: inset(0 100% 0 0);
-      animation: typing 0.5s steps(40, end) 3.8s forwards, fadeOut 0s 6.5s forwards;
+      animation: typing 0.5s steps(40, end) 3.8s forwards, hideLine 0s 6.5s forwards;
     }
     
     .post-load {
@@ -70,10 +70,10 @@
     <text x="15" y="146" class="type-effect l8 value">- Building awesome hardware with ESP32-CAM</text>
     <text x="15" y="160" class="type-effect l9 value">- Writing custom automation scripts</text>
     
-    <text x="15" y="180" class="loading-line value">Loading modules... [██████████░] 90%</text>
+    <text x="15" y="182" class="loading-line value">Loading modules... [██████████░] 90%</text>
     
-    <text x="15" y="185" class="post-load l10"><tspan class="key">Total Repositories:</tspan> <tspan class="value">REPO_COUNT</tspan></text>
-    <text x="15" y="199" class="post-load l11"><tspan class="key">Total Commits (2026):</tspan> <tspan class="value">COMMIT_COUNT</tspan></text>
+    <text x="15" y="182" class="post-load l10"><tspan class="key">Total Repositories:</tspan> <tspan class="value">REPO_COUNT</tspan></text>
+    <text x="15" y="196" class="post-load l11"><tspan class="key">Total Commits (2026):</tspan> <tspan class="value">COMMIT_COUNT</tspan></text>
     
     <text x="15" y="220" class="post-load l12"><tspan class="key">Memory: </tspan> <tspan class="value">512MB / 16GB (3%)</tspan></text>
     <text x="15" y="234" class="post-load l13"><tspan class="key">Network:</tspan> <tspan class="value">Connected [100.0 Mbps]</tspan></text>
