@@ -4,7 +4,6 @@
     
     .text-base { font-family: monospace; font-size: 11px; fill: #c9d1d9; }
     
-    /* ألوان الثيم */
     .title { fill: #58a6ff; font-weight: bold; }
     .key { fill: #f1fa8c; font-weight: bold; }
     .value { fill: #f8f8f2; }
@@ -24,7 +23,6 @@
       to { opacity: 0; visibility: hidden; }
     }
 
-    /* تأخير ظهور الأسطر الأساسية بالتتابع */
     .l1 { animation-delay: 0.1s; }
     .l2 { animation-delay: 0.7s; }
     .l3 { animation-delay: 1.3s; }
@@ -47,8 +45,9 @@
     .l10 { animation-delay: 9.1s; }
     .l11 { animation-delay: 9.7s; }
     .l12 { animation-delay: 10.3s; }
+    .l13 { animation-delay: 10.9s; }
+    .l14 { animation-delay: 11.5s; }
 
-    /* مؤشر الكتابة الوامض */
     .cursor { fill: #50fa7b; animation: blink 0.8s infinite; }
     @keyframes blink { 50% { opacity: 0; } }
   </style>
@@ -75,8 +74,11 @@
     
     <text x="15" y="232" class="loading-line value">Loading modules... [██████████░] 90%</text>
     
-    <text x="15" y="240" class="post-load l10"><tspan class="key">Memory: </tspan> <tspan class="value">512MB / 16GB (3%)</tspan></text>
-    <text x="15" y="258" class="post-load l11"><tspan class="key">Network:</tspan> <tspan class="value">Connected [100.0 Mbps]</tspan></text>
-    <text x="15" y="276" class="post-load l12 meta">Last login: TODAY_DATE<tspan class="cursor">█</tspan></text>
+    <text x="15" y="240" class="post-load l10"><tspan class="key">Total Repositories:</tspan> <tspan class="value">12</tspan></text>
+    <text x="15" y="258" class="post-load l11"><tspan class="key">Total Commits:</tspan> <tspan class="value">482</tspan></text>
+    
+    <text x="15" y="284" class="post-load l12"><tspan class="key">Memory: </tspan> <tspan class="value">512MB / 16GB (3%)</tspan></text>
+    <text x="15" y="302" class="post-load l13"><tspan class="key">Network:</tspan> <tspan class="value">Connected [100.0 Mbps]</tspan></text>
+    <text x="15" y="320" class="post-load l14 meta">Last login: TODAY_DATE<tspan class="cursor">█</tspan></text>
   </g>
 </svg>
