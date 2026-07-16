@@ -1,0 +1,33 @@
+name: Update Last Login Date
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch: 
+
+jobs:
+  update-svg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Get Current Date in KSA
+        id: date
+        run: |
+          export TZ="Asia/Riyadh"
+          CURRENT_DATE=$(date +"%a %b %d %H:%M:%S KSA %Y")
+          echo "NEW_DATE=$CURRENT_DATE" >> $GITHUB_ENV
+
+      - name: Update Date inside SVG File
+        run: |
+          sed -i -E "s/Last login: .*<\/span>/Last login: ${{ env.NEW_DATE }}<\/span>/g" neofetch-info.svg
+          sed -i "s/TODAY_DATE/${{ env.NEW_DATE }}/g" neofetch-info.svg
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add neofetch-info.svg
+          git diff-index --quiet HEAD || git commit -m "⏱️ Auto-update Last Login timestamp [Skip CI]"
+          git push
