@@ -2,7 +2,6 @@
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-        /* ستايل نافذة الـ Terminal المحكم */
         .terminal {
           background-color: #0d1117;
           border: 1px solid #30363d;
@@ -15,7 +14,6 @@
           overflow: hidden;
         }
         
-        /* أزرار واجهة الماك */
         .buttons span {
           display: inline-block;
           width: 8px;
@@ -24,7 +22,6 @@
           margin-right: 4px;
         }
 
-        /* ستايل الأسطر العادية لتقليل الفراغات العمودية وتصغير الخط */
         .line {
           display: block;
           white-space: nowrap;
@@ -36,7 +33,6 @@
           animation: type-line 0.8s steps(40, end) forwards;
         }
 
-        /* ستايل خاص بشريط التحميل لكي يختفي بعد فترة */
         .loading-line {
           display: block;
           white-space: nowrap;
@@ -45,11 +41,9 @@
           font-size: 11px;
           line-height: 1.2;
           margin-top: 6px;
-          /* أنيميشن الكتابة، ثم أنيميشن الاختفاء المفاجئ بعد 4 ثوانٍ من ظهوره */
-          animation: type-line 0.8s steps(40, end) 4.1s forwards, fade-out 0s linear 8.1s forwards;
+          animation: type-line 0.8s steps(40, end) 4.6s forwards, fade-out 0s linear 8.6s forwards;
         }
 
-        /* ستايل الأسطر النهائية التي ستظهر بعد اختفاء التحميل */
         .post-load {
           display: block;
           white-space: nowrap;
@@ -61,7 +55,6 @@
           animation: type-line 0.8s steps(40, end) forwards;
         }
 
-        /* تأخير ظهور الأسطر الأساسية بالتتابع السريع */
         .l1 { animation-delay: 0.1s; }
         .l2 { animation-delay: 0.6s; }
         .l3 { animation-delay: 1.1s; }
@@ -70,11 +63,11 @@
         .l6 { animation-delay: 2.6s; }
         .l7 { animation-delay: 3.1s; }
         .l8 { animation-delay: 3.6s; }
+        .l9 { animation-delay: 4.1s; } 
 
-        /* تأخير ظهور الأسطر النهائية لتبدأ بالظهور فوراً بعد اختفاء شريط التحميل عند الثانية 8.1 */
-        .l9 { animation-delay: 8.2s; }
-        .l10 { animation-delay: 8.8s; }
-        .l11 { animation-delay: 9.4s; }
+        .l10 { animation-delay: 8.7s; }
+        .l11 { animation-delay: 9.3s; }
+        .l12 { animation-delay: 9.9s; }
 
         @keyframes type-line {
           from { width: 0; }
@@ -128,13 +121,13 @@
         <span class="line l6"><span class="key">IDE:</span> <span class="value">NetBeans / VS Code</span></span>
         <span class="line l7" style="margin-top: 4px; color: #50fa7b;">/* My Highlights */</span>
         <span class="line l8"><span class="value">- Building awesome hardware with ESP32-CAM</span></span>
+        <span class="line l9"><span class="value">- Writing custom automation scripts</span></span>
         
         <span class="loading-line"><span class="value">Loading modules... [██████████░] 90%</span></span>
         
-        <span class="post-load l9"><span class="key">Memory:</span> <span class="value">512MB / 16GB (3%)</span></span>
-        <span class="post-load l10"><span class="key">Network:</span> <span class="value">Connected [100.0 Mbps]</span></span>
-
-        <span class="post-load l11"><span class="meta-color">Last login: TODAY_DATE</span><span class="cursor"></span></span>      
+        <span class="post-load l10"><span class="key">Memory:</span> <span class="value">512MB / 16GB (3%)</span></span>
+        <span class="post-load l11"><span class="key">Network:</span> <span class="value">Connected [100.0 Mbps]</span></span>
+        <span class="post-load l12"><span class="meta-color">Last login: TODAY_DATE</span><span class="cursor"></span></span>
       </div>
     </div>
   </foreignObject>
