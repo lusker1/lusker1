@@ -39,9 +39,9 @@ jobs:
             COMMITS="$COMMITS_VAL"
           fi
           
-          sed -i -E "s/(Total Repositories:<\/span> <span class=\"value\">)[^<]*/\1$REPOS/g" neofetch-info.svg
-          sed -i -E "s/(Total Commits \(2026\):<\/span> <span class=\"value\">)[^<]*/\1$COMMITS/g" neofetch-info.svg
-          sed -i -E "s/(Last login: )[^<]*/\1$CURRENT_DATE/g" neofetch-info.svg
+          sed -i -E 's/(Total Repositories:.*class="value">)[^<]*/\1'"$REPOS"'/g' neofetch-info.svg
+          sed -i -E 's/(Total Commits.*class="value">)[^<]*/\1'"$COMMITS"'/g' neofetch-info.svg
+          sed -i -E 's/(Last login: )[^<]*/\1'"$CURRENT_DATE"'/g' neofetch-info.svg
 
       - name: Commit and Push Changes
         run: |
