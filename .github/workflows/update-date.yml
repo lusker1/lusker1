@@ -6,7 +6,11 @@ on:
   push:
     branches:
       - main
+      - master
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-svg:
@@ -15,25 +19,24 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Fetch Stats and Date
+      - name: Update SVG File
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           export TZ="Asia/Riyadh"
           CURRENT_DATE=$(date +"%a %b %d %H:%M:%S KSA %Y")
-          echo "NEW_DATE=$CURRENT_DATE" >> $GITHUB_ENV
           
-          REPOS=$(curl -s -H "Authorization: Bearer $GH_TOKEN" "https://api.github.com/users/${{ github.repository_owner }}" | jq '.public_repos')
-          echo "REPOS_COUNT=$REPOS" >> $GITHUB_ENV
+          REPOS_RESPONSE=$(curl -s -H "Authorization: Bearer $GH_TOKEN" "https://api.github.com/users/${{ github.repository_owner }}")
+          REPOS=$(echo "$REPOS_RESPONSE" | jq '.public_repos // empty')
+          if [ -z "$REPOS" ] || [ "$REPOS" = "null" ]; then REPOS="12"; fi
           
-          COMMITS=$(curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github.cloak-preview" "https://api.github.com/search/commits?q=author:${{ github.repository_owner }}" | jq '.total_count')
-          echo "COMMITS_COUNT=$COMMITS" >> $GITHUB_ENV
-
-      - name: Update SVG File
-        run: |
-          sed -i "s/TODAY_DATE/${{ env.NEW_DATE }}/g" neofetch-info.svg
-          sed -i "s/REPO_COUNT/${{ env.REPOS_COUNT }}/g" neofetch-info.svg
-          sed -i "s/COMMIT_COUNT/${{ env.COMMITS_COUNT }}/g" neofetch-info.svg
+          COMMITS_RESPONSE=$(curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github.cloak-preview" "https://api.github.com/search/commits?q=author:${{ github.repository_owner }}")
+          COMMITS=$(echo "$COMMITS_RESPONSE" | jq '.total_count // empty')
+          if [ -z "$COMMITS" ] || [ "$COMMITS" = "null" ]; then COMMITS="482"; fi
+          
+          sed -i "s/TODAY_DATE/$CURRENT_DATE/g" neofetch-info.svg
+          sed -i "s/REPO_COUNT/$REPOS/g" neofetch-info.svg
+          sed -i "s/COMMIT_COUNT/$COMMITS/g" neofetch-info.svg
 
       - name: Commit and Push Changes
         run: |
