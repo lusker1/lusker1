@@ -13,7 +13,7 @@
   </table>
 
   <br />
-
+<img src="./typing-code.svg" width="800" alt="Animated SVG Coding" />
   <div>
     <a href="https://github.com/lusker1">
       <img src="https://img.shields.io/badge/GITHUB-0d1117?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
