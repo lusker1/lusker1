@@ -1,13 +1,12 @@
 <div align="center">
 
-
   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border: none;">
     <tr>
       <td valign="top" style="border: none; padding: 10px;">
-        <img src="./ascii-art.svg" width="380" />
+        <img src="./ascii-art.svg" width="380" height="315" />
       </td>
       <td valign="top" style="border: none; padding: 10px;">
-        <img src="./neofetch-info.svg" width="380" />
+        <img src="./neofetch-info.svg?v=2" width="380" height="315" />
       </td>
     </tr>
   </table>
