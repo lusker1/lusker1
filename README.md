@@ -17,7 +17,7 @@
     <a href="https://github.com/lusker1">
       <img src="https://img.shields.io/badge/GITHUB-0d1117?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
     </a>
-    <a href="https://youtu.be/W8byJ664yFw">
+    <a href="https://youtu.be/Rg_4Tmd598M">
       <img src="https://img.shields.io/badge/YOUTUBE-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
     </a>
   </div>
