@@ -1,7 +1,7 @@
-<svg fill="none" viewBox="0 0 400 325" width="400" height="325" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 400 290" width="400" height="290" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1; rx: 6px; }
-    .text-base { font-family: monospace; font-size: 10.5px; fill: #c9d1d9; }
+    .text-base { font-family: monospace; font-size: 10px; fill: #c9d1d9; }
     .title { fill: #58a6ff; font-weight: bold; }
     .key { fill: #f1fa8c; font-weight: bold; }
     .value { fill: #f8f8f2; }
@@ -53,35 +53,33 @@
     @keyframes blink { 50% { opacity: 0; } }
   </style>
 
-  <rect width="398" height="323" x="1" y="1" class="bg" />
+  <rect width="398" height="288" x="1" y="1" class="bg" />
 
-  <circle cx="20" cy="15" r="3.5" fill="#ff5f56" />
-  <circle cx="32" cy="15" r="3.5" fill="#ffbd2e" />
-  <circle cx="44" cy="15" r="3.5" fill="#27c93f" />
-  <text x="60" y="18" class="text-base meta" font-size="9.5">lusker1@github: ~</text>
+  <circle cx="20" cy="15" r="3" fill="#ff5f56" />
+  <circle cx="30" cy="15" r="3" fill="#ffbd2e" />
+  <circle cx="40" cy="15" r="3" fill="#27c93f" />
+  <text x="55" y="18" class="text-base meta" font-size="9">lusker1@github: ~</text>
 
   <g class="text-base">
-    <text x="15" y="42" class="type-effect l1 title">lusker1@github</text>
-    <text x="15" y="55" class="type-effect l2">-------------------</text>
+    <text x="15" y="40" class="type-effect l1 title">lusker1@github</text>
+    <text x="15" y="52" class="type-effect l2">-------------------</text>
     
-    <text x="15" y="70" class="type-effect l3"><tspan class="key">Role:</tspan> <tspan class="value">Full Stack Developer</tspan></text>
-    <text x="15" y="84" class="type-effect l4"><tspan class="key">Location:</tspan> <tspan class="value">Riyadh, KSA</tspan></text>
-    <text x="15" y="98" class="type-effect l5"><tspan class="key">Stack: </tspan> <tspan class="value">Laravel, Vue.js, java</tspan></text>
-    <text x="15" y="112" class="type-effect l6"><tspan class="key">IDE:   </tspan> <tspan class="value">NetBeans / VS Code</tspan></text>
+    <text x="15" y="66" class="type-effect l3"><tspan class="key">Role:</tspan> <tspan class="value">Full Stack Developer</tspan></text>
+    <text x="15" y="79" class="type-effect l4"><tspan class="key">Location:</tspan> <tspan class="value">Riyadh, KSA</tspan></text>
+    <text x="15" y="92" class="type-effect l5"><tspan class="key">Stack: </tspan> <tspan class="value">Laravel, Vue.js, java</tspan></text>
+    <text x="15" y="105" class="type-effect l6"><tspan class="key">IDE:   </tspan> <tspan class="value">NetBeans / VS Code</tspan></text>
     
-    <text x="15" y="132" class="type-effect l7 comment">/* My Highlights */</text>
+    <text x="15" y="123" class="type-effect l7 comment">/* My Highlights */</text>
     <text x="15" y="146" class="type-effect l8 value">- Building awesome hardware with ESP32-CAM</text>
-    <text x="15" y="160" class="type-effect l9 value">- Writing custom automation scripts</text>
+    <text x="15" y="159" class="type-effect l9 value">- Writing custom automation scripts</text>
     
-    <!-- شريط التحميل: يظهر عند 3.8ث ويختفي عند 6.5ث تماماً -->
-    <text x="15" y="185" class="loading-line value">Loading modules... [██████████░] 90%</text>
+    <text x="15" y="182" class="loading-line value">Loading modules... [██████████░] 90%</text>
     
-    <!-- الأسطر النهائية: تبدأ بالظهور فوراً عند 6.6ث في مسافات متباعدة ومضمونة -->
-    <text x="15" y="185" class="post-load l10"><tspan class="key">Total Repositories:</tspan> <tspan class="value">REPO_COUNT</tspan></text>
-    <text x="15" y="200" class="post-load l11"><tspan class="key">Total Commits (2026):</tspan> <tspan class="value">COMMIT_COUNT</tspan></text>
+    <text x="15" y="182" class="post-load l10"><tspan class="key">Total Repositories:</tspan> <tspan class="value">REPO_COUNT</tspan></text>
+    <text x="15" y="195" class="post-load l11"><tspan class="key">Total Commits (2026):</tspan> <tspan class="value">COMMIT_COUNT</tspan></text>
     
-    <text x="15" y="225" class="post-load l12"><tspan class="key">Memory: </tspan> <tspan class="value">512MB / 16GB (3%)</tspan></text>
-    <text x="15" y="240" class="post-load l13"><tspan class="key">Network:</tspan> <tspan class="value">Connected [100.0 Mbps]</tspan></text>
-    <text x="15" y="255" class="post-load l14 meta">Last login: TODAY_DATE<tspan class="cursor">█</tspan></text>
+    <text x="15" y="218" class="post-load l12"><tspan class="key">Memory: </tspan> <tspan class="value">512MB / 16GB (3%)</tspan></text>
+    <text x="15" y="231" class="post-load l13"><tspan class="key">Network:</tspan> <tspan class="value">Connected [100.0 Mbps]</tspan></text>
+    <text x="15" y="244" class="post-load l14 meta">Last login: TODAY_DATE<tspan class="cursor">█</tspan></text>
   </g>
 </svg>
