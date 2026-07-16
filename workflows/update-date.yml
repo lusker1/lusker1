@@ -1,9 +1,12 @@
-name: Update Last Login Date
+name: Update GitHub Stats and Date
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch: 
+    - cron: '0 * * * *'
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   update-svg:
@@ -12,22 +15,34 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Get Current Date in KSA
-        id: date
+      - name: Fetch Stats and Date
         run: |
           export TZ="Asia/Riyadh"
           CURRENT_DATE=$(date +"%a %b %d %H:%M:%S KSA %Y")
           echo "NEW_DATE=$CURRENT_DATE" >> $GITHUB_ENV
+          
+          REPOS=$(curl -s "https://api.github.com/users/${{ github.repository_owner }}" | jq '.public_repos')
+          echo "REPOS_COUNT=$REPOS" >> $GITHUB_ENV
+          
+          COMMITS=$(curl -s "https://api.github.com/search/commits?q=author:${{ github.repository_owner }}" -H "Accept: application/vnd.github.cloak-preview" | jq '.total_count')
+          echo "COMMITS_COUNT=$COMMITS" >> $GITHUB_ENV
 
-      - name: Update Date inside SVG File
+      - name: Update SVG File
         run: |
-          sed -i -E "s/Last login: .*<\/span>/Last login: ${{ env.NEW_DATE }}<\/span>/g" neofetch-info.svg
-          sed -i "s/TODAY_DATE/${{ env.NEW_DATE }}/g" neofetch-info.svg
+          sed -i "s/Last login: .*<tspan/Last login: ${{ env.NEW_DATE }}<tspan/g" neofetch-info.svg
+          sed -i "s/TODAY_DATE/${{ env.NEW_ENV }}/g" neofetch-info.svg
+          sed -i "s/Last login: TODAY_DATE/Last login: ${{ env.NEW_DATE }}/g" neofetch-info.svg
+          
+          sed -i "s/Total Repositories:<\/tspan> <tspan class=\"value\">[0-9]*/Total Repositories:<\/tspan> <tspan class=\"value\">${{ env.REPOS_COUNT }}/g" neofetch-info.svg
+          sed -i "s/REPO_COUNT/${{ env.REPOS_COUNT }}/g" neofetch-info.svg
+          
+          sed -i "s/Total Commits (2026):<\/tspan> <tspan class=\"value\">[0-9]*/Total Commits (2026):<\/tspan> <tspan class=\"value\">${{ env.COMMITS_COUNT }}/g" neofetch-info.svg
+          sed -i "s/COMMIT_COUNT/${{ env.COMMITS_COUNT }}/g" neofetch-info.svg
 
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add neofetch-info.svg
-          git diff-index --quiet HEAD || git commit -m "⏱️ Auto-update Last Login timestamp [Skip CI]"
+          git diff-index --quiet HEAD || git commit -m "⏱️ Auto-update GitHub Stats and Date [Skip CI]"
           git push
