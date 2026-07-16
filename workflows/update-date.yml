@@ -29,14 +29,13 @@ jobs:
 
       - name: Update SVG File
         run: |
-          sed -i "s/Last login: .*<tspan/Last login: ${{ env.NEW_DATE }}<tspan/g" neofetch-info.svg
-          sed -i "s/TODAY_DATE/${{ env.NEW_ENV }}/g" neofetch-info.svg
-          sed -i "s/Last login: TODAY_DATE/Last login: ${{ env.NEW_DATE }}/g" neofetch-info.svg
+          sed -i -E "s/Last login: [^<]+/Last login: ${{ env.NEW_DATE }}/g" neofetch-info.svg
+          sed -i "s/TODAY_DATE/${{ env.NEW_DATE }}/g" neofetch-info.svg
           
-          sed -i "s/Total Repositories:<\/tspan> <tspan class=\"value\">[0-9]*/Total Repositories:<\/tspan> <tspan class=\"value\">${{ env.REPOS_COUNT }}/g" neofetch-info.svg
+          sed -i -E "s/Total Repositories:<\/tspan> <tspan class=\"value\">[^<]+/Total Repositories:<\/tspan> <tspan class=\"value\">${{ env.REPOS_COUNT }}/g" neofetch-info.svg
           sed -i "s/REPO_COUNT/${{ env.REPOS_COUNT }}/g" neofetch-info.svg
           
-          sed -i "s/Total Commits (2026):<\/tspan> <tspan class=\"value\">[0-9]*/Total Commits (2026):<\/tspan> <tspan class=\"value\">${{ env.COMMITS_COUNT }}/g" neofetch-info.svg
+          sed -i -E "s/Total Commits \(2026\):<\/tspan> <tspan class=\"value\">[^<]+/Total Commits \(2026\):<\/tspan> <tspan class=\"value\">${{ env.COMMITS_COUNT }}/g" neofetch-info.svg
           sed -i "s/COMMIT_COUNT/${{ env.COMMITS_COUNT }}/g" neofetch-info.svg
 
       - name: Commit and Push Changes
