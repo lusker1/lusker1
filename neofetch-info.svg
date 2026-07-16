@@ -8,8 +8,11 @@
           border-radius: 6px;
           padding: 15px;
           font-family: monospace;
+          color: #c9d1d9;
           height: 350px;
+          overflow: hidden;
         }
+        
         .buttons span {
           display: inline-block;
           width: 9px;
@@ -17,8 +20,34 @@
           border-radius: 50%;
           margin-right: 4px;
         }
+
+        .typing-container {
+          white-space: pre; 
+          font-size: 13px;
+          line-height: 1.6;
+          overflow: hidden;
+          
+          animation: typing 5s steps(80, end) forwards;
+        }
+
+        /* تعريف حركة الكتابة (Typing Animation) */
+        @keyframes typing {
+          from { width: 0; }
+          to { width: 100%; }
+        }
+
+        .typing-container::after {
+          content: '|';
+          color: #50fa7b; 
+          animation: blink 1s infinite;
+        }
+        @keyframes blink {
+          50% { opacity: 0; }
+        }
+
+        /* الألوان المخصصة (الثيم) */
         .title { color: #58a6ff; font-weight: bold; }
-        .key { color: #f1fa8c; font-weight: bold; } /* تم تغيير اللون هنا إلى الأصفر */
+        .key { color: #f1fa8c; font-weight: bold; } 
         .value { color: #f8f8f2; }
       </style>
 
@@ -27,20 +56,20 @@
           <span style="background: #ff5f56;"></span>
           <span style="background: #ffbd2e;"></span>
           <span style="background: #27c93f;"></span>
-          <span style="color: #8b949e; margin-left: 10px; font-size: 11px;">lusker1@github: ~</span>
+          <span style="color: #8b949e; margin-left: 10px; font-size: 11px;">sidi_moulay@github: ~</span>
         </div>
         
-        <div style="font-size: 13px; line-height: 1.6;">
-          <span class="title">lusker1@github</span><br/>
-          <span>-------------------</span><br/>
-          <span class="key">Role:</span> <span class="value">Full Stack Developer</span><br/>
-          <span class="key">Location:</span> <span class="value">Riyadh, KSA</span><br/>
-          <span class="key">Stack:</span> <span class="value">Laravel, Vue.js, java</span><br/>
-          <span class="key">IDE:</span> <span class="value">Cursor / VS Code</span><br/>
-          <br/>
-          <span style="color: #50fa7b;">/* My Highlights */</span><br/>
-          <span class="value">- Building awesome hardware with ESP32-CAM</span><br/>
-          <span class="value">- Writing custom automation scripts</span>
+        <div class="typing-container">
+<span class="title">lusker1@github</span><br/>
+<span>-------------------</span><br/>
+<span class="key">Role:</span> <span class="value">Full Stack Developer</span><br/>
+<span class="key">Location:</span> <span class="value">Riyadh, KSA</span><br/>
+<span class="key">Stack:</span> <span class="value">Laravel, Vue.js, java</span><br/>
+<span class="key">IDE:</span> <span class="value">NetBeans / VS Code</span><br/>
+<br/>
+<span style="color: #50fa7b;">/* My Highlights */</span><br/>
+<span class="value">- Building awesome hardware with ESP32-CAM</span><br/>
+<span class="value">- Writing custom automation scripts</span>
         </div>
       </div>
     </div>
