@@ -18,7 +18,7 @@
       <img src="https://skillicons.dev/icons?i=github" height="40" alt="GitHub" />
     </a>
     <a href="https://youtu.be/Rg_4Tmd598M">
-      <img src="https://img.shields.io/badge/YOUTUBE-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
+      <img src="https://skillicons.dev/icons?i=youtube" height="40" alt="YouTube" />
     </a>
   </div>
 
