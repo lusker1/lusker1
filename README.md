@@ -13,12 +13,18 @@
 
   <br />
 
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-  <a href="https://github.com/lusker1">
-    <img src="https://img.shields.io/badge/GITHUB-0d1117?style=for-the-badge&logo=GitHub&logoColor=white" alt="GitHub" />
-  </a>
-  <a href="https://youtu.be/Rg_4Tmd598M">
-    <img src="https://img.shields.io/badge/YOUTUBE-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
-  </a>
-</div>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; border: none;">
+  <tr>
+    <td align="left" style="border: none; padding: 0;">
+      <a href="https://github.com/lusker1">
+        <img src="https://img.shields.io/badge/GITHUB-0d1117?style=for-the-badge&logo=GitHub&logoColor=white" alt="GitHub" />
+      </a>
+    </td>
+    <td align="right" style="border: none; padding: 0;">
+      <a href="https://youtu.be/Rg_4Tmd598M">
+        <img src="https://img.shields.io/badge/YOUTUBE-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
+      </a>
+    </td>
+  </tr>
+</table>
 </div>
