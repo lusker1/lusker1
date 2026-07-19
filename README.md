@@ -15,10 +15,10 @@
 
 <div>
   <a href="https://github.com/lusker1">
-    <img src="https://skillicons.dev/icons?i=github" height="40" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GITHUB-0d1117?style=for-the-badge&logo=GitHub&logoColor=white" alt="GitHub" />
   </a>
   <a href="https://youtu.be/Rg_4Tmd598M">
-    <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/video-24.svg" height="40" style="background-color: #161b22; padding: 8px; border-radius: 10px; filter: invert(14%) sepia(85%) saturate(6741%) hue-rotate(357deg) brightness(98%) contrast(116%);" alt="YouTube" />
+    <img src="https://img.shields.io/badge/YOUTUBE-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
   </a>
 </div>
 
