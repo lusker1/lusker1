@@ -15,7 +15,7 @@
 
   <div>
     <a href="https://github.com/lusker1">
-      <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/github-dark.svg" height="40" alt="GitHub" />
+      <img src="https://skillicons.dev/icons?i=github" height="40" alt="GitHub" />
     </a>
     <a href="https://youtu.be/Rg_4Tmd598M">
       <img src="https://img.shields.io/badge/YOUTUBE-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
