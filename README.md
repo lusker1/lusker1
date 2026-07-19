@@ -13,13 +13,13 @@
 
   <br />
 
-  <div>
-    <a href="https://github.com/lusker1">
-      <img src="https://skillicons.dev/icons?i=github" height="40" alt="GitHub" />
-    </a>
-    <a href="https://youtu.be/Rg_4Tmd598M">
-      <img src="https://skillicons.dev/icons?i=youtube" height="40" alt="YouTube" />
-    </a>
-  </div>
+<div>
+  <a href="https://github.com/lusker1">
+    <img src="https://skillicons.dev/icons?i=github" height="40" alt="GitHub" />
+  </a>
+  <a href="https://youtu.be/Rg_4Tmd598M">
+    <img src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/youtube.svg" height="40" style="border-radius: 10px;" alt="YouTube" />
+  </a>
+</div>
 
 </div>
