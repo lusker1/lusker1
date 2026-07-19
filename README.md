@@ -13,9 +13,9 @@
 
   <br />
 
-<div>
+<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
   <a href="https://github.com/lusker1">
-    <img src="https://img.shields.io/badge/GITHUB-0d1117?style=for-the-badge&logo=GitHub&logoColor=white" style="margin-right: 15px;" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GITHUB-0d1117?style=for-the-badge&logo=GitHub&logoColor=white" alt="GitHub" />
   </a>
   <a href="https://youtu.be/Rg_4Tmd598M">
     <img src="https://img.shields.io/badge/YOUTUBE-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
